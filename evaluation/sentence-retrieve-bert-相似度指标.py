@@ -1,3 +1,4 @@
+#python37
 import logging
 import os
 from sentence_transformers import SentenceTransformer
