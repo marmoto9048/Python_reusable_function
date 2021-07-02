@@ -1,5 +1,4 @@
 def read_file(file_path):
-
     f = open(file_path)
     line = f.readline()
     sentence_lst = []
@@ -20,3 +19,9 @@ def save(file,data):
         filename.write(str(value)+'\n')
     filename.close()
     print('saved in ',file)
+
+   
+def n_line():
+    f.writelines(lists) #1 是不换行的写入，可用以下方法在写入时换行。
+    for line in lists:      #2  换行
+        f.write(line+'\n')
