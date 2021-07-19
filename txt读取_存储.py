@@ -32,3 +32,8 @@ def write_in_file():
     f = open('test.txt', 'w') # 若是'wb'就表示写二进制文件
     f.write('Hello, world!') #写入一行
     f.close()
+    
+def read_file(file_path):
+    f = open(file_path)
+    line = f.readline()
+    return line
