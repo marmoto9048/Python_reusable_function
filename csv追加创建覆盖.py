@@ -27,3 +27,7 @@ def read_csv():
         csv_read = csv.reader(f)
         for line in csv_read:
             print line
+            
+# 在用pandas输出csv时，如果不对第一行和第一列进行定义，pandas会自动用数字序号补齐，但有时候我们只想单纯输出数据，不想要表头或者序号，那么就需要以下的操作：
+output = pd.DataFrame(data=list1)
+output.to_csv('save_path', header=None, index=None)
