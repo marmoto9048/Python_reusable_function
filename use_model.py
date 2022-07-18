@@ -22,25 +22,14 @@ def use_model_data_argument(input_query):
                                     top_p= 0.99,
                                     top_k = 3,
                                     num_return_sequences=40)
-    paraphrases = []#Paraphrase-any-question-with-T5-Text-To-Text-Transfer-Transformer--master/checkpointepoch=0.ckpt
+    paraphrases = []
     # print('sample_outputs',sample_outputs)  #sample_outputs:40 lines
     # r=sample_outputs[1]
     r = tokenizer.decode(sample_outputs[1], skip_special_tokens=True).split('||')[0]
     r = r.split(' ~~ ')[1]
     # print('r-after',r)
     return r
-# print('sample_outputs[1]',sample_outputs[1])
-# for i in range(len(sample_outputs)):
-#     print('r-before', i)
-#     r = tokenizer.decode(sample_outputs[i], skip_special_tokens=True).split('||')[0]
-#     r = r.split(' ~~ ')[1]
-#     # print('r',r)
-#     if r not in paraphrases:
-#         paraphrases.append(r)
-# print('len',len(paraphrases),'len(sample_outputs)',len(sample_outputs))
-# for i in range(len(paraphrases)):
-#     print(i,paraphrases[i-1])
-# print(paraphrases)
+
 def read_file(file_path):
 
     f = open(file_path)
@@ -67,7 +56,6 @@ def save(file,data):
 if __name__=='__main__':
     input_file_path = "test-100.txt"
     output_file_path= "2.txt"
-    # input_query=["every moment is a fresh beginning","one moment is a fresh beginning","tomorror morning is a fresh beginning"]
     output_list=[]
 
     input_query=read_file(input_file_path) #1 读取文件
