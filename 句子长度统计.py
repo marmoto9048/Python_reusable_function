@@ -17,8 +17,7 @@ def vocabulary_stat(file_name):
 
 #-0-------------------------------------------------------------------------------------------------------
 
-file_name = './data/mscoco/acr-para-all.txt'
-file_name = './data/mscoco/acr-para-all.txt'
+file_name = './data/mscoco/all.txt'
 vocabulary_stat(file_name)
 # test_source.txt  test_target.txt  train_source
 
