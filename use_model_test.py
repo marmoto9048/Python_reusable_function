@@ -59,22 +59,8 @@ def save(file,data):
     print('saved in ',file)
 
 
-# input_file_path = "test-100.txt"
-# output_file_path= "test-100.txt-gpt2-0output2.txt"
-# output_list=[]
-#
-# input_query=read_file(input_file_path) #1 读取文件
-# print('input_query',input_query)
-# for i in range(len(input_query)):
-#     output_list.append(generateMiddle(input_query[i]))  # 2 使用model转换1中的文件list
-#     if i%5==0:
-#         print('正在处理第：',i)
-# save(output_file_path, output_list)
-# print('output_list',len(output_list))
-# print('完成！')
-
-input_file_path = "data/aclarc-trainset-0-5w.txt"   #aclarc-trainset-0-5w
-output_file_path= "data/aclarc-trainset-0-5w-gpt2-remake3.csv"
+input_file_path = "data/trainset.txt"  
+output_file_path= "data/remake3.csv"
 # input_query=["every moment is a fresh beginning","one moment is a fresh beginning","tomorror morning is a fresh beginning"]
 output_list=[]
 #
