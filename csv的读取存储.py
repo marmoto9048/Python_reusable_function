@@ -1,4 +1,4 @@
-#节选自 处理符号.py
+#处理符号.py
 import csv
 import nltk
 import numpy as np
@@ -21,8 +21,8 @@ def save_to_csv(output_file_path,data): #输入list
   
   
 if __name__ == "__main__":
-    file_path='10w-gpt2-to-clean.csv'
-    output_file_path='out_put_corpus_for_t5.csv'
+    file_path='clean.csv'
+    output_file_path='out.csv'
     sentence=read_csv_file(file_path)
     sequence=[]
     for i in range(len(sentence)):
