@@ -1,6 +1,6 @@
-from grammer_check.gec_model import GecBERTModel
-from grammer_check.predict_sent2 import grammer_use
-from grammer_check.grammer_score import final_score
+from gec_model import GecBERTModel
+from predict_sent2 import grammer_use
+from grammer_score import final_score
 import argparse
 def grammar_checker(input_sent):
     input_sent_list=['']*1
