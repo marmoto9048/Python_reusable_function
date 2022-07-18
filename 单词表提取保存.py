@@ -1,6 +1,6 @@
 # 假设英文句子为t
 t ='After updating from 2.0.40 to 2.0.42, all POST-request to the cgi-bin are \
-    broken, and return the script source-code! GET-request to the same scripts \
+    broken, and return the script source-code! Request to the same scripts \
     function normal.\
     This is not a config issue, worked up to 2.0.40, and works for GET in 2.0.42'
 def save(file,data):
@@ -22,9 +22,9 @@ def vocabulary_stat(file_name):
     return alcarc_vocabulary  #返回单词表
 #-0-------------------------------------------------------------------------------------------------------
 
-file_name = './data/mscoco/acr-para-all.txt'
-# file_name = './data/mscoco/1.txt'
-out_file_name = './data/mscoco/train_vocab.txt'
+file_name = './data/para-all.txt'
+# file_name = './data/1.txt'
+out_file_name = './data/train_vocab.txt'
 alcarc_vocabulary=vocabulary_stat(file_name)
 # test_source.txt  test_target.txt  train_source
 
@@ -34,7 +34,7 @@ print('已保存')
 # 单词表长度： 538531
 # 出现过多少个单词 29295953
 # 有多少句 180116974
-# saved in  ./data/mscoco/train_vocab.txt
+# saved in  ./data/train_vocab.txt
 # 已保存
 
 
