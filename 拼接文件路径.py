@@ -12,13 +12,8 @@ print("1:",os.path.join('aaaa','/bbbb','ccccc.txt'))
 print("2:",os.path.join('/aaaa','/bbbb','/ccccc.txt'))
 
 print("3:",os.path.join('aaaa','./bbb','ccccc.txt'))
-1
-2
-3
-4
-5
-6
-7
+
+
 输出为
 
 1: /bbbb\ccccc.txt
