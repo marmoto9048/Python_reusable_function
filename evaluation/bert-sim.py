@@ -2,7 +2,7 @@
 from sentence_transformers import SentenceTransformer
 from Read_Save import read_file
 
-model = SentenceTransformer('paraphrase-distilroberta-base-v1')
+model = SentenceTransformer('base')
 sentences = ['This framework generates embeddings for each input sentence',
     'Sentences are passed as a list of string.',
     'The quick brown fox jumps over the lazy dog.']
@@ -12,9 +12,9 @@ for sentence, embedding in zip(sentences, sentence_embeddings):
     print("Embedding:", embedding)
     print("")
 if __name__=='__main__':
-    read_file_path = '1_NLU/test-100-output0-NLU.txt'
-    target = '1_NLU/test-100.txt'
-    out_file_path = '1_NLU/bert-out.txt'
+    read_file_path = 'NLU.txt'
+    target = 'test-100.txt'
+    out_file_path = 'out.txt'
     # input_query=["every moment is a fresh beginning","one moment is a fresh beginning","tomorror morning is a fresh beginning"]
     output_list=[]
 
