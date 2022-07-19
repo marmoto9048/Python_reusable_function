@@ -15,8 +15,8 @@ def jaccard_sim_score(resource, target): #resource:list
     print('jaccard_sim_score_all', jaccard_sim_score_all)
     return jaccard_sim_score_all
 
-read_file_path='1_NLU/test-100-output0-NLU.txt'
-target='1_NLU/test-100.txt'
+read_file_path='NLU.txt'
+target='test-100.txt'
 data=read_file(read_file_path)
 jaccard_sim_score(data, target)
 
