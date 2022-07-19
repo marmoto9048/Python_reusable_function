@@ -79,9 +79,9 @@ if __name__ == "__main__":
     save_vector = 'save_corpus_vec.csv'
     method = 'retr_sentbert'
 
-    query = '6-t5/test-100.txt'
-    corpus = '6-t5/test-100-t5-out.txt'
-    results_file='6-t5/results/'
+    query = 'test-100.txt'
+    corpus = 'test-100-out.txt'
+    results_file='results/'
     file_path=os.path.join(results_file,'sys-file.txt')
     if not os.path.exists(results_file):
         os.makedirs(results_file)
