@@ -5,7 +5,7 @@ import statistics
 import sys
 def cal_ppl(input_text):
     perplexity_list=[]
-    model = kenlm.Model('/media/marmoto/SSPH-UA/lab/evaluation/language-model/model/aclarc_model.bin')
+    model = kenlm.Model('model.bin')
     lines=open(input_text, 'r').readlines()
     # print('-----------lines：---',lines[3])
     for i in range(len(lines)):
@@ -41,6 +41,6 @@ def get_file_path_list(file_path1):
     return file_path_list
 
 if __name__ == '__main__':
-    file_path1 = "/media/marmoto9048/SSPH-UA/lab/evaluation/language-model/ppl"
+    file_path1 = "model/ppl"
     file_path_list=get_file_path_list(file_path1)
     print('file_path_list',file_path_list)
