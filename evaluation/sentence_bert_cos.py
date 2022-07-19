@@ -8,22 +8,21 @@ import re
 import statistics
 import sys
 
-def retr_sents(query, corpus):
+def input_sents(query, corpus):
     distance_cos_all=[]
     with open(query, 'r', encoding='UTF-8') as query:
         sents = [i.lower() for i in query.readlines()]
         with open(corpus, 'rb') as cor:
             resource = cor.readlines()
             num = 0
-            if method == 'retr_sentbert':
+            if method == 'input_sentbert':
                 for s in sents:
                     num += 1
                     print('For sentence ' + str(num),s)
                     print('For query ' + str(num), resource[sents.index(s)])
-                    distance_cos = retr_sentbert(s, resource)
+                    distance_cos = input_sentbert(s, resource)
                     print('distance_cos',distance_cos)
                     distance_cos_all.append(distance_cos)
-                    # with open('results/' + str(num) + '_retrieved_sentences_bert.txt', 'wb') as target:
 
             else:
                 print('Please input the method correctly.')
@@ -56,8 +55,6 @@ def read_corpus_vec():
         corpus_vec = justed_vector.readlines()
         # print('corpus_vec-----------', corpus_vec)
 def retr_sentbert(query, resource):  #query是单个句子
-    # get_corpus_vec(query, resource, target)
-    # read_corpus_vec()
     np.set_printoptions(threshold=np.inf)
     for i in range(len(resource)):
         resource[i] = str(resource[i])#, encoding='utf-8'
@@ -90,4 +87,4 @@ if __name__ == "__main__":
     sys.stdout = open(file_path, "w")   #os.path.join('aaaa','./bbb','sys-file.txt')
 
     retr_sents(query, corpus)
-##用法：修改路径名称，点击运行。
+
