@@ -4,11 +4,9 @@ import statistics
 import sys
 import kenlm
 # model = kenlm.Model('lm/test.arpa')
-#https://github.com/kpu/kenlm/blob/0c4dd4e8a29a9bcaf22d971a83f4974f1a16d6d9/python/kenlm.pyx
 def cal_ppl(input_text):
     perplexity_list=[]
-    model_path='/media/marmoto9048/SSPH-UA/lab/evaluation/language-model/model/aclarc_model.bin'
-    # model = kenlm.Model(model_path)
+    model_path='model.bin'
     # print(model.score('this is a sentence .', bos=True, eos=True))
 
     model = kenlm.Model(model_path)
@@ -60,7 +58,7 @@ if __name__ == '__main__':
     print('filename_path',filename_path)
     sys.stdout = open(filename_path, "w")
 
-    file_path1 = "/media/marmoto9048/SSPH-UA/lab/evaluation/language-model/ppl/"
+    file_path1 = "model/ppl/"
     file_path_list=get_file_path_list(file_path1)
     print('file_path_list',file_path_list)
     print('len(file_path_list)',len(file_path_list))
