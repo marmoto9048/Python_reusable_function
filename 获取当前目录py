@@ -11,6 +11,3 @@ print os.path.abspath(os.path.join(os.getcwd(), ".."))
 
 print '***获取上上级目录***'
 print os.path.abspath(os.path.join(os.getcwd(), "../.."))
- 
-# file='test-100-t5-out22.txt'
-# file=os.getcwd()+'/evaluation/data/test-100-t5-out22.txt'
