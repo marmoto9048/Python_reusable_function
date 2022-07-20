@@ -7,9 +7,9 @@ environment.yml 仅列出了软件包名称，由 conda 基于软件包的名称
 另一个区别是 -export 还包括使用pip安装的软件包，而 spec list 则没有。
 
  # '导出 environment.yml 文件：
-!conda env export > pypy36-gram2.yml
+!conda env export > py36-gram2.yml
 #'注意：如果当前路径已经有了 environment.yml 文件，conda 会重写这个文件
 
 #重现环境：
-conda env create -f grammer_check/pypy36-gram2.yml
+conda env create -f grammer_check/py36-gram2.yml
 Conda 环境迁移.py
