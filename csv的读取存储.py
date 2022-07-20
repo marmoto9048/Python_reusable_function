@@ -38,6 +38,6 @@ if __name__ == "__main__":
     #将清理好的句子存进csv
     origin_sentence = [x[1] for x in sentence]   #将origin句子单独提取出来到list中
     out_list2 = list(zip(origin_sentence, out_list))
-    # print('out_list2',out_list2)  #最终要被输出的句子   ：   原始的aclarc句子和gpt2润色后的句子
+    # print('out_list2',out_list2)  #最终要被输出的句子   ：   原始的句子和修改后的句子
     save_to_csv(output_file_path,out_list2)
-    print('完成！！！')
+    print('完成！')
