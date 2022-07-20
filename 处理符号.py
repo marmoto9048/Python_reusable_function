@@ -32,8 +32,8 @@ def clean_sentence(sequence):
     # print("字符串移除后为 : " + new_str)
     return new_str2
 if __name__ == "__main__":
-    file_path='10w-gpt2-to-clean.csv'
-    output_file_path='out_put_corpus_for_t5.csv'
+    file_path='10w-to-clean.csv'
+    output_file_path='output_corpus.csv'
     sentence=read_csv_file(file_path)
     sequence=[]
     for i in range(len(sentence)):
@@ -45,11 +45,10 @@ if __name__ == "__main__":
         new_str=clean_sentence(str(sequence[j]))   #清理掉<start  符号
         # print('new_str',new_str)
         out_list.append(new_str)
-    # print('out_list', out_list)
     #将清理好的句子存进csv
     origin_sentence = [x[1] for x in sentence]   #将origin句子单独提取出来到list中
     out_list2 = list(zip(origin_sentence, out_list))
-    # print('out_list2',out_list2)  #最终要被输出的句子   ：   原始的aclarc句子和gpt2润色后的句子
+    # print('out_list2',out_list2)  #最终要被输出的句子   ：   原始的句子和修改后的句子
     save_to_csv(output_file_path,out_list2)
-    print('完成！！！')
+    print('完成！')
 
