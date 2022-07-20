@@ -22,8 +22,7 @@ def vocabulary_stat(file_name):
     return alcarc_vocabulary  #返回单词表
 #-0-------------------------------------------------------------------------------------------------------
 
-file_name = './data/para-all.txt'
-# file_name = './data/1.txt'
+file_name = './data/all.txt'
 out_file_name = './data/train_vocab.txt'
 alcarc_vocabulary=vocabulary_stat(file_name)
 # test_source.txt  test_target.txt  train_source
@@ -36,5 +35,5 @@ print('已保存')
 # 有多少句 180116974
 # saved in  ./data/train_vocab.txt
 # 已保存
-
+# 针对语料库中单词数量的统计
 
