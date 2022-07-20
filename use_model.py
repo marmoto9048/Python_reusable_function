@@ -1,4 +1,4 @@
-from transformers import AutoTokenizer, AutoModelWithLMHead
+from transformers import model  #自己选择要用的模型
 
 import torch
 def use_model_data_argument(input_query):
@@ -7,21 +7,20 @@ def use_model_data_argument(input_query):
     else :
         device = "cpu"
 
-    tokenizer = AutoTokenizer.from_pretrained("salesken/paraphrase_generation")
-    model = AutoModelWithLMHead.from_pretrained("salesken/paraphrase_generation").to(device)
+    tokenizer = AutoTokenizer.from_pretrained("generation")
+    model = AutoModelWithLMHead.from_pretrained("generation").to(device)
 
-    # for i in range(len(input_query)):
     query= input_query + " ~~ "
 
     input_ids = tokenizer.encode(query.lower(), return_tensors='pt').to(device)
     sample_outputs = model.generate(input_ids,
                                     do_sample=True,
                                     num_beams=1,
-                                    max_length=128,
-                                    temperature=0.9,
-                                    top_p= 0.99,
-                                    top_k = 3,
-                                    num_return_sequences=40)
+                                    max_length=xxx,
+                                    temperature=xxx,
+                                    top_p= xxx,
+                                    top_k = xxx,
+                                    num_return_sequences=xx)
     paraphrases = []
     # print('sample_outputs',sample_outputs)  #sample_outputs:40 lines
     # r=sample_outputs[1]
@@ -54,8 +53,8 @@ def save(file,data):
     print('saved in ',file)
 
 if __name__=='__main__':
-    input_file_path = "test-100.txt"
-    output_file_path= "2.txt"
+    input_file_path = "test_100.txt"
+    output_file_path= "output_100.txt"
     output_list=[]
 
     input_query=read_file(input_file_path) #1 读取文件
