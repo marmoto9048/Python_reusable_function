@@ -3,7 +3,7 @@
 import pyodbc
 import pandas as pd
 def get_date_from_sql():
-    connect = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=192.163.333.3;DATABASE=333 ;UID=xx;PWD=33333333')
+    connect = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=192.168.xxx.xx;DATABASE=xxx ;UID=xxx;PWD=xxxx')
     cursor = connect.cursor()
     sql="SELECT xxxx from xxxx"
     cursor.execute(sql)
