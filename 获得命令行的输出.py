@@ -10,4 +10,3 @@ for line in context.splitlines():
     print(line)
 result.close()
 
-https://zhuanlan.zhihu.com/p/117495961
